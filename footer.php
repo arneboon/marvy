@@ -13,6 +13,7 @@
 <?php if ( is_active_sidebar( 'sidebar-2' ) ) { ?>
 
 	<div class="footer-widget-area">
+	<a name="contact"></a>
 
 		<div class="container">
 
@@ -28,9 +29,11 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="container site-info">
-		<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'marvy' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'marvy' ), 'WordPress' ); ?></a>
+		&copy;
+		<?php echo date('Y'); ?>
+		Studio Arne Boon
 		<span class="sep"> | </span>
-		<?php printf( esc_html__( 'Theme: %1$s', 'marvy' ), 'Marvy' ); ?>
+		All rights reserved
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 
