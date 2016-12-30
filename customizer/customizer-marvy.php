@@ -39,9 +39,9 @@ $options[] = array(
 );
 
 $options[] = array(
-	'title'			 => __( 'About Content', 'marvy' ), // Section name
+	'title'			 => __( 'Theme Features', 'marvy' ), // Section name
 	'panel'			 => 'home_panel', // panel
-	'id'			 => 'home_about_content', // unique ID
+	'id'			 => 'home_theme_features', // unique ID
 	'theme_supports' => '',
 	'type'			 => 'section'
 );
@@ -55,9 +55,9 @@ $options[] = array(
 );
 
 $options[] = array(
-	'title'			 => __( 'Theme Features', 'marvy' ), // Section name
+	'title'			 => __( 'Projects', 'marvy' ), // Section name
 	'panel'			 => 'home_panel', // panel
-	'id'			 => 'home_theme_features', // unique ID
+	'id'			 => 'home_projects', // unique ID
 	'theme_supports' => '',
 	'type'			 => 'section'
 );
@@ -66,6 +66,14 @@ $options[] = array(
 	'title'			 => __( 'Latest Blog', 'marvy' ), // Section name
 	'panel'			 => 'home_panel', // panel
 	'id'			 => 'home_latest_blog', // unique ID
+	'theme_supports' => '',
+	'type'			 => 'section'
+);
+
+$options[] = array(
+	'title'			 => __( 'About Content', 'marvy' ), // Section name
+	'panel'			 => 'home_panel', // panel
+	'id'			 => 'home_about_content', // unique ID
 	'theme_supports' => '',
 	'type'			 => 'section'
 );
@@ -192,17 +200,29 @@ $options[] = array(
  * Site features
  */
 
+ // Section page
+ $options[] = array(
+ 	'title'				 => __( 'Select features page', 'marvy' ), // Control label
+ 	'description'		 => '', // Control description
+ 	'section'			 => 'home_theme_features', // section
+ 	'id'				 => 'home_theme_features_page', // unique ID
+ 	'default'			 => 0,
+ 	'option'			 => 'pages',
+ 	'sanitize_callback'	 => 'marvy_sanitize_int',
+ 	'type'				 => 'control'
+ );
+
 // Section title
-$options[] = array(
-	'title'				 => __( 'Section Title', 'marvy' ), // Control label
-	'description'		 => '', // Control description
-	'section'			 => 'home_theme_features', // section
-	'id'				 => 'home_theme_feature_title', // unique ID
-	'default'			 => __( 'Theme features', 'marvy' ),
-	'option'			 => 'text',
-	'sanitize_callback'	 => 'sanitize_text_field',
-	'type'				 => 'control'
-);
+// $options[] = array(
+// 	'title'				 => __( 'Section Title', 'marvy' ), // Control label
+// 	'description'		 => '', // Control description
+// 	'section'			 => 'home_theme_features', // section
+// 	'id'				 => 'home_theme_feature_title', // unique ID
+// 	'default'			 => __( 'Theme features', 'marvy' ),
+// 	'option'			 => 'text',
+// 	'sanitize_callback'	 => 'sanitize_text_field',
+// 	'type'				 => 'control'
+// );
 
 // Feature page 1
 $options[] = array(
@@ -326,6 +346,18 @@ $options[] = array(
 	'default'			 => '',
 	'option'			 => 'textarea',
 	'sanitize_callback'	 => 'esc_textarea',
+	'type'				 => 'control'
+);
+
+// Banner Content Page
+$options[] = array(
+	'title'				 => __( 'Select projects page', 'marvy' ), // Control label
+	'description'		 => '', // Control description
+	'section'			 => 'home_projects', // section
+	'id'				 => 'home_projects_content', // unique ID
+	'default'			 => 0,
+	'option'			 => 'pages',
+	'sanitize_callback'	 => 'marvy_sanitize_int',
 	'type'				 => 'control'
 );
 
