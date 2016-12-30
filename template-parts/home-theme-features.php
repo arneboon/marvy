@@ -1,12 +1,30 @@
-<div class="home-section home-theme-features">
-	<div class="container">
-		<?php
-		// Title
-		$title = esc_attr( get_option( 'home_theme_feature_title' ) );
+<!--?php
+$page_id = intval( get_option( 'home_theme_features_page' ) );
 
-		if ( !empty( $title ) ) {
-			printf( __( '<h2>%s</h2>', 'marvy' ), $title );
-		}
+if ( 0 == $page_id ) {
+	return;
+}
+?-->
+
+<div class="home-section home-theme-features home-latest-blog">
+	<div class="container home-about-content">
+		<?php
+		// Title Marvy Original
+		// $title = esc_attr( get_option( 'home_theme_feature_title' ) );
+		//
+		// if ( !empty( $title ) ) {
+		// 	printf( __( '<h2>%s</h2>', 'marvy' ), $title );
+		// }
+		//
+		// Get itle from selected page
+		// $title = get_the_title( $page_id );
+		//
+		// if ( !empty( $title ) ) {
+		// 	echo '<h2>' . $title . '</h2>'; //note: turn off title display
+		// }
+
+		// Introduction from selected page
+		marvy_page_content_by_id( $page_id, 'the_content' );
 
 		// Pages
 		$page_first	 = intval( get_option( 'home_theme_feature_1' ) );
