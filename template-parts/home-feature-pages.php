@@ -1,3 +1,11 @@
+<?php
+$page_id = intval( get_option( 'home_feature_pages_title' ) );
+
+if ( 0 == $page_id ) {
+	return;
+}
+?>
+
 <div class="home-section home-feature-pages post-box-style">
 	<div class="container">
 		<?php
