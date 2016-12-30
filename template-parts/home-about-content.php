@@ -5,7 +5,9 @@ if ( 0 == $page_id ) {
 }
 ?>
 
-<div class="home-section home-about-section">
+<a name="home-section-about"></a>
+
+<div class="home-section home-about-section home-latest-blog">
 	<div class="container home-about-content">
 		<?php
 		// Title
@@ -26,5 +28,9 @@ if ( 0 == $page_id ) {
 			echo get_the_post_thumbnail( $page_id, 'full', array( 'class' => 'about-img' ) );
 		}
 		?>
+
 	</div>
+
+
+
 </div>
