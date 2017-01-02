@@ -46,6 +46,7 @@ if ( !function_exists( 'marvy_setup' ) ) :
 		if ( function_exists( 'add_image_size' ) ) {
 			add_image_size( 'marvy-thumb', 440, 330, true );
 			add_image_size( 'marvy-large-thumb', 800, 320, true );
+			add_image_size( 'portfolio-thumb', 504, 378, true );
 		}
 
 		/*
