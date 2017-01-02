@@ -577,7 +577,7 @@ input.search-field {
     text-align: center;
 }
 .wp-caption.alignleft {
-    margin: 0.5rem 2rem 1.625rem 0;
+    margin: 0.5rem 1.5rem 1rem 0;
 }
 .wp-caption.aligncenter {
     margin-left: auto;
@@ -1043,6 +1043,17 @@ blockquote {
     font-style: italic;
     margin: 0 0 1.625rem 1.625rem;
     padding-left: 1rem;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+div.about-quote p {
+  color: #222;
+  font-family: 'Oswald', sans-serif;
+  font-size: 42px;
+  text-align: left;
+  line-height: 1.5em;
+  font-weight: 350;
 }
 
 /**
@@ -1736,20 +1747,18 @@ div#primary-menu > ul > li > a {
     text-align: center;
 }
 
-.home-about-content {
-    font-size: 17px;
-    font-weight: 300;
-    text-align: center;
-}
 .home-about-content h2 {
     margin-bottom: 2rem;
 }
 .home-about-content p {
     color: #787878;
-    font-size: 0.9375rem;
+    /*font-size: 0.9375rem;*/
+    font-size: 1rem;
     margin: 0;
     padding: 0 1rem;
     font-weight: 300;
+    text-align: justify;
+    padding: 0 0;
 }
 
 .home-callout {
@@ -1879,7 +1888,7 @@ div#primary-menu > ul > li > a {
     clear: both;
     display: block;
     margin: 60px auto 20px;
-    max-width: 380px;
+    max-width: 320px;
     width: 100%;
 }
 
@@ -3941,7 +3950,7 @@ label[for='subscribe-reloaded'] {
         font-size: 36px;
     }
 
-    .about-excerpt,
+    .about-content,
     .home-callout {
         max-width: 68%;
         margin-left: auto;
