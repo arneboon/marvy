@@ -59,35 +59,36 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content grid">
-			<div class="grid-cell sm-grid-1-1 md-grid-1-1">
-				<!--INTRODUCTION-->
-				<span class="project-introduction ">
-					<p><?php the_field('introduction'); ?></p>
-				</span>
+		<div class="grid-cell sm-grid-1-1 md-grid-1-1">
+			<!--INTRODUCTION-->
+			<span class="project-introduction ">
+				<p><?php the_field('introduction'); ?></p>
+			</span>
 
-				<!--CONTENT-->
-				<span class="project-content">
-					<?php the_content(); ?>
-				</span>
+			<!--CONTENT-->
+			<span class="project-content">
+				<?php the_content(); ?>
+			</span>
 
-				<!--YOUTUBE-->
-				<?php
-					//https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
-					$youtube_code = get_field('youtube_code');
+			<!--YOUTUBE-->
+			<?php
+				//https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+				$youtube_code = get_field('youtube_code');
 
-					if ($youtube_code) {
-						$youtube_embed = 'https://www.youtube.com/embed/';
-						$youtube_url = $youtube_embed . $youtube_code;
-						$iframe_begin = '<div class="embed-container"><iframe src="';
-						$iframe_end = '" frameborder="0" allowfullscreen></iframe></div>';
-						$iframe = $iframe_begin . $youtube_url . $iframe_end;
-						echo $iframe;
-					}
-				?>
+				if ($youtube_code) {
+					$youtube_embed = 'https://www.youtube.com/embed/';
+					$youtube_url = $youtube_embed . $youtube_code;
+					$iframe_begin = '<div class="embed-container"><iframe src="';
+					$iframe_end = '" frameborder="0" allowfullscreen></iframe></div>';
+					$iframe = $iframe_begin . $youtube_url . $iframe_end;
+					echo $iframe;
+				}
+			?>
 
-				<!--GALLERY-->
-				<p><?php the_field('gallery'); ?></p>
-			</div>
+			<!--GALLERY-->
+			<p><?php the_field('gallery'); ?></p>
+		</div>
+
 		<?php
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'marvy' ),
