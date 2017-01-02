@@ -87,8 +87,47 @@
 
 			<!--GALLERY-->
 			<p><?php the_field('gallery'); ?></p>
+
+			<?php
+				$num = 5;
+				for ($i=1; $i < $num; $i++) {
+					$name = 'image' . $i;
+					$image = get_field($name);
+					$size = 'portfolio-gallery';
+					if (!empty($image)) {
+						// vars
+						$url = $image['url'];
+						$title = $image['title'];
+						$alt = $image['alt'];
+						$caption = $image['caption'];
+
+						// thumbnail
+						$size = 'portfolio-gallery';
+						$thumb = $image['sizes'][ $size ];
+						$width = $image['sizes'][ $size . '-width' ];
+						$height = $image['sizes'][ $size . '-height' ];
+
+						if (!empty($caption)) {
+							echo '<div class="wp-caption">';
+						}
+
+						?>
+						<a href="<?php echo $url; ?>" title="<?php echo $title; ?>">
+							<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
+						</a>
+						<?php
+
+						if (!empty($caption)) {
+							echo '<p class="wp-caption-text" style="text-align: center;">' . $caption . '</p>';
+							echo '</div>';
+						}
+					}
+				}
+			?>
+
 		</div>
 
+		<!-- http://www.wpbeginner.com/wp-themes/how-to-use-thumbnails-with-previous-and-next-post-links-in-wordpress/ -->
 		<?php
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'marvy' ),
