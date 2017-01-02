@@ -7,26 +7,33 @@ if ( 0 == $page_id ) {
 
 <a name="home-section-about"></a>
 
-<div class="home-section home-about-section home-latest-blog">
+<div class="home-section home-latest-blog">
 	<div class="container home-about-content">
 		<?php
-		// Title
-		$title = get_the_title( $page_id );
-
-		if ( !empty( $title ) ) {
-			echo '<h2>' . $title . '</h2>';
-		}
+			$title = get_the_title( $page_id );
+			if ( !empty( $title ) ) {
+				echo '<h2>' . $title . '</h2>';
+			}
 		?>
 
-		<div class="about-excerpt">
-			<?php marvy_page_content_by_id( $page_id, 'the_excerpt' ); ?>
+		<div class="grid">
+			<div class="grid-cell sm-grid-1-1 md-grid-1-3 about-quote">
+				<?php
+					$id = 93;
+					$post = get_post($id);
+					$content = apply_filters('the_content', $post->post_content);
+					echo $content;
+				?>
+			</div>
+			<div class="grid-cell sm-grid-1-1 md-grid-2-3 home-about-content">
+				<?php marvy_page_content_by_id( $page_id, 'the_content' ); ?>
+			</div>
 		</div>
 
 		<?php
-		// Feature Image
-		if ( has_post_thumbnail( $page_id ) ) {
-			echo get_the_post_thumbnail( $page_id, 'full', array( 'class' => 'about-img' ) );
-		}
+			if ( has_post_thumbnail( $page_id ) ) {
+				echo get_the_post_thumbnail( $page_id, 'full', array( 'class' => 'about-img' ) );
+			}
 		?>
 
 	</div>
