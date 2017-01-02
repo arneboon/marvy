@@ -14,7 +14,7 @@ if ( !function_exists( 'marvy_setup' ) ) :
 		global $content_width;
 
 		if ( !isset( $content_width ) ) {
-			$content_width = apply_filters( 'marvy_content_width', 720 );
+			$content_width = apply_filters( 'marvy_content_width', 1050 );
 		}
 
 		/*
@@ -78,7 +78,7 @@ if ( !function_exists( 'marvy_setup' ) ) :
 			'default-color'	 => 'ffffff',
 			'default-image'	 => '',
 		) ) );
-		
+
 		/**
 		 * Add custom log support
 		 */
