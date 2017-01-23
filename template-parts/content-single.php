@@ -60,6 +60,7 @@
 
 	<div class="entry-content grid">
 		<div class="grid-cell sm-grid-1-1 md-grid-1-1">
+
 			<!--INTRODUCTION-->
 			<span class="project-introduction ">
 				<p><?php the_field('introduction'); ?></p>
@@ -81,6 +82,21 @@
 					$iframe_begin = '<div class="embed-container"><iframe src="';
 					$iframe_end = '" frameborder="0" allowfullscreen></iframe></div>';
 					$iframe = $iframe_begin . $youtube_url . $iframe_end;
+					echo $iframe;
+				}
+			?>
+
+			<!--VIMEO-->
+			<?php
+				// <iframe src="https://player.vimeo.com/video/183905151" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				$vimeo_code = get_field('vimeo_code');
+
+				if ($vimeo_code) {
+					$vimeo_embed = 'https://player.vimeo.com/video/';
+					$vimeo_url = $vimeo_embed . $vimeo_code;
+					$iframe_begin = '<iframe src="';
+					$iframe_end = '" width="1050" height="591" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+					$iframe = $iframe_begin . $vimeo_url . $iframe_end;
 					echo $iframe;
 				}
 			?>
@@ -120,6 +136,8 @@
 						if (!empty($caption)) {
 							echo '<p class="wp-caption-text" style="text-align: center;">' . $caption . '</p>';
 							echo '</div>';
+						} else {
+							echo '<br><br>';
 						}
 					}
 				}
