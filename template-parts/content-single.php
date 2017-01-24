@@ -64,11 +64,13 @@
 			<!--INTRODUCTION-->
 			<span class="project-introduction ">
 				<p><?php the_field('introduction'); ?></p>
+				<br>
 			</span>
 
 			<!--CONTENT-->
 			<span class="project-content">
 				<?php the_content(); ?>
+				<br>
 			</span>
 
 			<!--YOUTUBE-->
@@ -106,7 +108,7 @@
 
 			<?php
 				$num = 5;
-				for ($i=1; $i < $num; $i++) {
+				for ($i=1; $i <= $num; $i++) {
 					$name = 'image' . $i;
 					$image = get_field($name);
 					$size = 'portfolio-gallery';
@@ -128,9 +130,9 @@
 						}
 
 						?>
-						<a href="<?php echo $url; ?>" title="<?php echo $title; ?>">
+						<!--a href="<?php echo $url; ?>" title="<?php echo $title; ?>"-->
 							<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
-						</a>
+						<!--/a-->
 						<?php
 
 						if (!empty($caption)) {
