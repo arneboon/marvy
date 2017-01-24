@@ -35,9 +35,5 @@ if ( 0 == $page_id ) {
 				echo get_the_post_thumbnail( $page_id, 'full', array( 'class' => 'about-img' ) );
 			}
 		?>
-
 	</div>
-
-
-
 </div>
