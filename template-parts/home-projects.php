@@ -15,7 +15,7 @@ if ( 0 == $page_id ) {
 		$title = get_the_title( $page_id );
 
 		if ( !empty( $title ) ) {
-			echo '<h2>' . $title . '</h2>';
+			echo '<h2>' . $title . '</h2><br>';
 		}
 		?>
 
