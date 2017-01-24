@@ -11,6 +11,57 @@ Text Domain: marvy
 Domain Path: /languages/
 Tags: one-column, two-columns, right-sidebar, custom-background, custom-menu, featured-images, post-formats, full-width-template, translation-ready, theme-options, threaded-comments, footer-widgets, custom-logo
 */
+/*--------------------------------------------------------------
+# CUSTOM
+--------------------------------------------------------------*/
+.home-theme-features p,
+.entry-content p,
+.portfolio-entry-content {
+	text-align: justify;
+	text-align-last: center;
+}
+
+.portfolio-entry-title a {
+	color: #444;
+}
+
+h2.portfolio-entry-title {
+	font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+}
+
+h2.portfolio-entry-title {
+	margin-bottom: 0;
+}
+
+div.portfolio-entry-content {
+    color: #787878;
+    font-size: 1rem;
+    margin: 0.2rem 0 0;
+    padding: 0 1rem;
+	font-weight: 300;
+	text-align: center;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* GRID */
 /**
  * Micro clearfix, as per: http://cssmojo.com/latest_new_clearfix_so_far/
