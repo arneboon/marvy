@@ -13,7 +13,7 @@
 <?php if ( is_active_sidebar( 'sidebar-2' ) ) { ?>
 
 	<div class="footer-widget-area">
-	<a name="contact"></a>
+	<a name="footer-contact"></a>
 
 		<div class="container">
 

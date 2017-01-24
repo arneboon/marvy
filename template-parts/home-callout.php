@@ -6,9 +6,9 @@ if ( 0 == $page_id ) {
 }
 ?>
 
-<a name="home-section-contact"></a>
+<a class="anchor" id="contact"></a>
 
-<div class="home-section home-download-section home-bg-grey">
+<div class="home-section home-section-callout">
 	<div class="container">
 		<div class="home-callout">
 			<?php
