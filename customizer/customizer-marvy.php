@@ -87,6 +87,14 @@ $options[] = array(
 );
 
 $options[] = array(
+	'title'			 => __( 'Footer Map', 'marvy' ), // Section name
+	'panel'			 => 'home_panel', // panel
+	'id'			 => 'home_footer_map', // unique ID
+	'theme_supports' => '',
+	'type'			 => 'section'
+);
+
+$options[] = array(
 	'title'			 => __( 'Custom Codes', 'marvy' ), // Section name
 	'panel'			 => '', // panel
 	'priority'		 => 211,
@@ -355,6 +363,18 @@ $options[] = array(
 	'description'		 => '', // Control description
 	'section'			 => 'home_projects', // section
 	'id'				 => 'home_projects_content', // unique ID
+	'default'			 => 0,
+	'option'			 => 'pages',
+	'sanitize_callback'	 => 'marvy_sanitize_int',
+	'type'				 => 'control'
+);
+
+// Banner Content Page
+$options[] = array(
+	'title'				 => __( 'Select footer map page', 'marvy' ), // Control label
+	'description'		 => '', // Control description
+	'section'			 => 'home_footer_map', // section
+	'id'				 => 'home_footer_map_content', // unique ID
 	'default'			 => 0,
 	'option'			 => 'pages',
 	'sanitize_callback'	 => 'marvy_sanitize_int',

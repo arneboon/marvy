@@ -14,6 +14,7 @@ get_header();
 <!--?php get_template_part( 'template-parts/home', 'theme-features' ); ?-->
 <!--?php get_template_part( 'template-parts/home', 'latest-blog' ); ?-->
 <?php get_template_part( 'template-parts/home', 'callout' ); ?>
+<?php get_template_part( 'template-parts/home', 'footer-map' ); ?>
 
 <?php
 
