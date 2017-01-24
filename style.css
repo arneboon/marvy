@@ -509,7 +509,8 @@ textarea {
 input[type=submit],
 input[type=button],
 #submit {
-    background-color: #ef6e7e;
+    /*background-color: #ef6e7e;*/
+    background-color: #1e73be;
     border-radius: 2px;
     border: 0;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -1102,7 +1103,7 @@ blockquote {
 div.about-quote p {
   color: #222;
   font-family: 'Oswald', sans-serif;
-  font-size: 42px;
+  font-size: 40px;
   text-align: left;
   line-height: 1.5em;
   font-weight: 350;
@@ -1413,7 +1414,7 @@ figure {
     }
 }
 .widget-area {
-    font-size: 0.875rem;
+    font-size: 1rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -1436,6 +1437,11 @@ figure {
     color: #444;
     font-size: 0.9375rem;
     letter-spacing: 1px;
+}
+
+.textwidget p{
+  font-weight: 300;
+  font-size: 1.1rem;
 }
 
 .widget ul {
@@ -1537,7 +1543,7 @@ body:not(.page-template-homepage) .site-content {
 }
 .home-banner:after {
     /*background: url("./img/header-bg.png") no-repeat 50% 100%;*/
-    background: url("./img/008.png") no-repeat 50% 100%;
+    /*background: url("./img/008.png") no-repeat 50% 100%;*/
     bottom: 0;
     content: ' ';
     height: 400px;
@@ -1697,6 +1703,13 @@ div#primary-menu > ul > li > a {
     right: 15px;
 }
 
+a.anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
+
 /* Small menu. */
 .menu-toggle {
     background: transparent;
@@ -1791,7 +1804,7 @@ div#primary-menu > ul > li > a {
     font-size: 2.1875rem;
     font-weight: 300;
     line-height: 1;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
@@ -1815,12 +1828,23 @@ div#primary-menu > ul > li > a {
 }
 
 .home-callout {
-    font-size: 1.0625rem;
+    font-size: 1.1rem;
     color: #666;
+    /*color: #FFF;*/
     font-weight: 300;
+    text-align: center;
 }
 .home-callout p:last-child {
     margin: 0;
+}
+
+.home-section-callout {
+    /*background: #1e73be;*/
+}
+.home-section-callout h4 {
+    font-size: 1.375rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
 }
 
 .img-wrap h4 {
@@ -1868,7 +1892,7 @@ div#primary-menu > ul > li > a {
     text-align: center;
 }
 .home-theme-features h4 {
-    font-size: 1.25rem;
+    font-size: 1.45rem;
     font-weight: 400;
     margin-bottom: 1.25rem;
 }
@@ -1883,9 +1907,11 @@ div#primary-menu > ul > li > a {
 }
 .home-theme-features p {
     color: #787878;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     margin: 0;
     padding: 0 1rem;
+    font-weight: 200;
+    line-height: 2.25rem;
 }
 
 .overlay {
@@ -1972,15 +1998,6 @@ div#primary-menu > ul > li > a {
 
 .byline {
     text-transform: capitalize;
-}
-
-.home-download-section {
-    text-align: center;
-}
-.home-download-section h4 {
-    font-size: 1.375rem;
-    font-weight: 300;
-    margin-bottom: 3rem;
 }
 
 .home-social-section {
@@ -3532,7 +3549,7 @@ body:not(.error404):not(.page-template-full-width) .entry-grid .site-main {
   max-width: 100%;
   text-align: justify;
   text-align-last: center;
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem;
 }
 
 .entry-title {
@@ -3551,6 +3568,7 @@ body:not(.error404):not(.page-template-full-width) .entry-grid .site-main {
 
 h1.entry-title {
     font-size: 34px;
+    text-align: center;
 }
 
 .nav-links {
@@ -3933,6 +3951,10 @@ label[for='subscribe-reloaded'] {
     background: rgba(0, 0, 0, 0.2);
 }
 
+.footer-widget i {
+  margin-right: 1rem;
+}
+
 .site-footer {
     background: #000;
     color: #898989;
@@ -4012,7 +4034,7 @@ label[for='subscribe-reloaded'] {
     }
 
     .home-banner {
-        font-size: 36px;
+        font-size: 38px;
     }
 
     .about-content,
