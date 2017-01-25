@@ -3548,7 +3548,7 @@ body:not(.error404):not(.page-template-full-width) .entry-grid .site-main {
 	font-size: 1.5rem;
 	font-weight: 400;
 	margin: 0 auto;
-  max-width: 75%;
+  max-width: 100%;
   text-align: justify;
   text-align-last: center;
   margin-top: 1rem;
