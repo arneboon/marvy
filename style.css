@@ -23,7 +23,7 @@ Tags: one-column, two-columns, right-sidebar, custom-background, custom-menu, fe
 
 .portfolio-entry-title a {
 	color: #444;
-  padding: 2rem;*/
+  /*padding: 2rem;*/
 }
 
 h2.portfolio-entry-title {
@@ -4027,7 +4027,7 @@ label[for='subscribe-reloaded'] {
     }
 
     .home-section h2 {
-        margin-bottom: 3rem;
+        /*margin-bottom: 3rem;*/
     }
 }
 /* Small screen / phone */
