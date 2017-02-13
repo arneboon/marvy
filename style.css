@@ -40,6 +40,10 @@ h2.portfolio-entry-title {
 	margin-bottom: 0;
 }
 
+h3.portfolio-media-title {
+	font-weight: 300;
+}
+
 div.portfolio-entry-content {
     color: #787878;
     font-size: 1rem;

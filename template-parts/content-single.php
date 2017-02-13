@@ -83,7 +83,7 @@
 					$youtube_url = $youtube_embed . $youtube_code;
 					$iframe_begin = '<div class="embed-container"><iframe src="';
 					$iframe_end = '" frameborder="0" allowfullscreen></iframe></div>';
-					$iframe = $iframe_begin . $youtube_url . $iframe_end;
+					$iframe = $iframe_begin . $youtube_url . $iframe_end . '<br>';
 					echo $iframe;
 				}
 			?>
@@ -98,13 +98,12 @@
 					$vimeo_url = $vimeo_embed . $vimeo_code;
 					$iframe_begin = '<iframe src="';
 					$iframe_end = '" width="1050" height="591" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
-					$iframe = $iframe_begin . $vimeo_url . $iframe_end;
+					$iframe = $iframe_begin . $vimeo_url . $iframe_end . '<br>';
 					echo $iframe;
 				}
 			?>
 
 			<!--GALLERY-->
-			<br>
 			<?php
 				$num = 5;
 				for ($i=1; $i <= $num; $i++) {
@@ -112,6 +111,56 @@
 					$image = get_field($name);
 					$size = 'portfolio-gallery';
 					if (!empty($image)) {
+						// title
+						if ($i==1) {
+							echo '<br><h3 class="portfolio-media-title">Gallery</h3>';
+						}
+
+						// vars
+						$url = $image['url'];
+						$title = $image['title'];
+						$alt = $image['alt'];
+						$caption = $image['caption'];
+
+						// thumbnail
+						$size = 'portfolio-gallery';
+						$thumb = $image['sizes'][ $size ];
+						$width = $image['sizes'][ $size . '-width' ];
+						$height = $image['sizes'][ $size . '-height' ];
+
+						if (!empty($caption)) {
+							echo '<div class="wp-caption">';
+						}
+
+						?>
+						<!--a href="<?php echo $url; ?>" title="<?php echo $title; ?>"-->
+							<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
+						<!--/a-->
+						<?php
+
+						if (!empty($caption)) {
+							echo '<p class="wp-caption-text" style="text-align: center;">' . $caption . '</p>';
+							echo '</div>';
+						} else {
+							echo '<br><br>';
+						}
+					}
+				}
+			?>
+
+			<!--MAKING OF-->
+			<?php
+				$num = 5;
+				for ($i=1; $i <= $num; $i++) {
+					$name = 'makingof_image' . $i;
+					$image = get_field($name);
+					$size = 'portfolio-gallery';
+					if (!empty($image)) {
+						// title
+						if ($i==1) {
+							echo '<br><h3 class="portfolio-media-title">Making Of</h3>';
+						}
+
 						// vars
 						$url = $image['url'];
 						$title = $image['title'];
