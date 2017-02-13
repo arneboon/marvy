@@ -104,8 +104,7 @@
 			?>
 
 			<!--GALLERY-->
-			<p><?php the_field('gallery'); ?></p>
-
+			<br>
 			<?php
 				$num = 5;
 				for ($i=1; $i <= $num; $i++) {
